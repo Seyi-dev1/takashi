@@ -4,8 +4,11 @@ import Testimonial from "../../../../components/testimonials/testimonial";
 const Homepage = () => {
   return (
     <div>
-      <Hero />
-      <Testimonial />
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
+      <SectionFive />
     </div>
   );
 };
