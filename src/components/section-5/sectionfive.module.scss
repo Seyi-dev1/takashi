@@ -1,0 +1,66 @@
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  padding: 3rem 4rem;
+  gap: 2rem;
+
+  .info_con {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .intro {
+      font-size: 0.9rem;
+      color: #d10000;
+      font-weight: 600;
+    }
+
+    .big {
+      font-size: 3rem;
+      font-weight: 500;
+      color: #01949a;
+    }
+
+    .desc {
+      font-size: 1rem;
+      font-weight: 400;
+      width: 80%;
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .appbtn {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #01949a;
+        gap: 10px;
+        border-radius: 5px;
+        .icon {
+          font-size: 2rem;
+          color: #fff;
+        }
+        .text_con {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .download_text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #fff;
+          }
+          .store_name {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
