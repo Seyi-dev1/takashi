@@ -4,11 +4,26 @@
   align-items: center;
   padding: 3rem 4rem;
   gap: 2rem;
+  @media screen and (max-width: 800px) {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .img_con {
+    .image {
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
 
   .info_con {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    @media screen and (max-width: 800px) {
+      gap: 0.7rem;
+    }
 
     .intro {
       font-size: 0.9rem;
@@ -20,12 +35,20 @@
       font-size: 3rem;
       font-weight: 500;
       color: #01949a;
+
+      @media screen and (max-width: 800px) {
+        font-size: 2rem;
+      }
     }
 
     .desc {
       font-size: 1rem;
       font-weight: 400;
       width: 80%;
+      @media screen and (max-width: 800px) {
+        font-size: 0.9rem;
+        width: 100%;
+      }
     }
 
     .list {
@@ -40,22 +63,36 @@
 
         .icon {
           width: 3rem;
+
+          @media screen and (max-width: 800px) {
+            width: 1.5rem;
+          }
         }
 
         .desc_con {
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
+          @media screen and (max-width: 800px) {
+            gap: 0.4rem;
+          }
 
           .title {
             font-size: 1.2rem;
             font-weight: 500;
             color: #01949a;
+            @media screen and (max-width: 800px) {
+              font-size: 1rem;
+            }
           }
           .small {
             font-size: 0.9rem;
             font-weight: 400;
             color: black;
+
+            @media screen and (max-width: 800px) {
+              font-size: 0.8rem;
+            }
           }
         }
       }
