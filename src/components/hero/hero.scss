@@ -23,13 +23,20 @@
     padding: 0 6rem;
 
     /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @media screen and (max-width: 800px) {
+      padding: 0 1rem;
+      padding-top: 3rem;
+    }
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
+      @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
 
       .text {
         @keyframes catchAnimation {
@@ -77,12 +84,20 @@
           color: rgb(255, 59, 59);
           font-style: italic;
           font-weight: 600;
+          @media screen and (max-width: 800px) {
+            font-size: 0.8rem;
+          }
         }
 
         .heading {
           font-size: 1.3rem;
           margin-top: 0.9rem;
           animation: headingAnimation 1.3s ease-in-out;
+          @media screen and (max-width: 800px) {
+            font-size: 0.55rem;
+            line-height: 1.7rem;
+            margin-top: 0.5rem;
+          }
           //   line-height: 1.5;
         }
 
@@ -92,19 +107,36 @@
           width: 70%;
           color: rgb(94, 94, 94);
           animation: descriptionAnimation 1.3s ease-in-out;
+          @media screen and (max-width: 800px) {
+            width: 100%;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            color: rgb(121, 121, 121);
+            font-weight: 500;
+          }
           //   animation-delay: 1s;
         }
 
         .mybutton {
           margin-top: 3rem;
           animation: buttonAnimation 1.3s ease-in-out;
+          @media screen and (max-width: 800px) {
+            font-size: 0.8rem;
+            margin-top: 2rem;
+          }
         }
       }
 
       .image {
         padding-top: 5rem;
+        @media screen and (max-width: 800px) {
+          justify-self: center;
+        }
         img {
           width: 38rem;
+          @media screen and (max-width: 800px) {
+            width: 15rem;
+          }
         }
       }
     }
@@ -127,6 +159,9 @@
       padding: 1rem 0.5rem;
       cursor: pointer;
       z-index: 1;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
     }
   }
 }

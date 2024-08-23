@@ -1,0 +1,56 @@
+.testimonialCard {
+  border-radius: 5px;
+  background-color: #fff;
+  min-height: 16rem;
+  padding: 1rem;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .image {
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
+
+    .quotes {
+      font-size: 2.9rem;
+      color: rgb(255, 180, 180);
+      @media screen and (max-width: 800px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .description {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    @media screen and (max-width: 800px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .name {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    @media screen and (max-width: 800px) {
+      font-size: 0.7rem;
+    }
+  }
+
+  .position {
+    font-size: 0.9rem;
+    color: rgb(164, 161, 161);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    @media screen and (max-width: 800px) {
+      font-size: 0.8rem;
+    }
+  }
+}
