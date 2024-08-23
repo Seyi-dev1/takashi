@@ -1,14 +1,18 @@
+import Footer from "../../../../components/footer/footer";
 import Hero from "../../../../components/hero/hero";
 import Testimonial from "../../../../components/testimonials/testimonial";
 
 const Homepage = () => {
   return (
     <div>
-      <SectionOne />
+      {/* <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
-      <SectionFive />
+      <SectionFive /> */}
+      <Hero />
+      <Testimonial />
+      <Footer />
     </div>
   );
 };
