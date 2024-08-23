@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import hero1 from "../../assets/hero-slide-4.png";
 import hero2 from "../../assets/hero-slide-5.png";
 import hero3 from "../../assets/hero-slide-6.png";
@@ -29,9 +29,13 @@ const Hero = () => {
           nextEl: ".next",
         }}
         pagination={true}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
         loop={true}
         speed={1000}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
