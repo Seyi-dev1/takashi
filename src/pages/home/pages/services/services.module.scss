@@ -1,0 +1,50 @@
+.main {
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 4rem;
+    gap: 2rem;
+
+    @media screen and (max-width: 800px) {
+      padding: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    .service {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-radius: 8px;
+      background: #e0e0e0;
+      box-shadow: 27px 27px 78px #eaeaea, -27px -27px 78px #f6f6f6;
+
+      .title_con {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .icon {
+          font-size: 3rem;
+          color: #01949a;
+        }
+        .title_text {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #dc4731;
+        }
+      }
+
+      .text {
+        font-size: 1rem;
+        font-family: "poppins";
+        font-weight: 300;
+      }
+      .link {
+        text-decoration: none;
+        color: #01949a;
+        font-weight: 400;
+      }
+    }
+  }
+}

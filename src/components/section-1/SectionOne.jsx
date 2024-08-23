@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import styles from "./sectionone.module.scss";
 import CButton from "../custom-button/CButton";
 import IMAGE from "../../assets/about-img-1.png";
-const SectionOne = () => {
+const SectionOne = ({ desc, title }) => {
   return (
     <div className={styles.main}>
       <div className={styles.img_con}>
@@ -10,15 +11,8 @@ const SectionOne = () => {
       </div>
       <div className={styles.info_con}>
         <span className={styles.intro}>Smart Banking</span>
-        <span className={styles.big}>
-          The Better Way To Save & Invest Online
-        </span>
-        <span className={styles.desc}>
-          Your Haven Offshore Bank account is your key to unlocking a universe
-          of opportunities. Whether making international payments, receiving
-          funds, managing your digital business, or accessing capital, Haven
-          Offshore Bank opens your business up to the world.
-        </span>
+        <span className={styles.big}>{title}</span>
+        <span className={styles.desc}>{desc}</span>
         <div className={styles.list}>
           <span className={styles.item}>
             <IoCheckmarkDoneOutline className={styles.icon} />

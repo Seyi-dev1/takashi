@@ -4,7 +4,17 @@
   align-items: center;
   padding: 3rem 4rem;
   gap: 2rem;
-
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+  .img_con {
+    .image {
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
+    }
+  }
   .info_con {
     display: flex;
     flex-direction: column;
@@ -20,18 +30,30 @@
       font-size: 3rem;
       font-weight: 500;
       color: #01949a;
+      @media screen and (max-width: 800px) {
+        font-size: 2rem;
+      }
     }
 
     .desc {
       font-size: 1rem;
       font-weight: 400;
       width: 80%;
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        font-size: 0.9rem;
+      }
     }
 
     .btns {
       display: flex;
       align-items: center;
       gap: 2rem;
+
+      @media screen and (max-width: 800px) {
+        gap: 1rem;
+      }
 
       .appbtn {
         display: flex;
@@ -43,6 +65,10 @@
         .icon {
           font-size: 2rem;
           color: #fff;
+
+          @media screen and (max-width: 800px) {
+            font-size: 1.3rem;
+          }
         }
         .text_con {
           display: flex;
@@ -53,11 +79,18 @@
             font-size: 1.2rem;
             font-weight: 500;
             color: #fff;
+            @media screen and (max-width: 800px) {
+              font-size: 0.9rem;
+            }
           }
           .store_name {
             font-size: 1rem;
             color: #fff;
             font-weight: 300;
+
+            @media screen and (max-width: 800px) {
+              font-size: 0.9rem;
+            }
           }
         }
       }

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 0;
   width: 100%;
+  position: relative;
 
   .contact_nav {
     display: flex;
@@ -11,6 +12,10 @@
     padding: 1rem 4rem;
     background-color: #d10000;
     color: #fff;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
 
     .first {
       display: flex;
@@ -55,15 +60,25 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 800px) {
+      padding: 1rem 1rem;
+    }
+
     .logo_con {
       .logo {
         //! spcify size later
+        @media screen and (max-width: 800px) {
+          width: 100px;
+        }
       }
     }
     .links {
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
       .item {
         display: flex;
         flex-direction: column;
@@ -90,6 +105,74 @@
           }
         }
       }
+    }
+    .btn_con {
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+    .mobile {
+      display: none;
+
+      @media screen and (max-width: 800px) {
+        display: flex;
+        align-items: center;
+
+        .hamburger {
+          padding: 0.5rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #d10000;
+
+          &:hover {
+            background-color: #f28585;
+          }
+
+          .icon {
+            color: #fff;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile_nav {
+    display: none;
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      animation-name: navbar;
+      animation-duration: 1s;
+      height: 20rem;
+      background-color: #01949a;
+      color: #fff;
+      padding: 1rem;
+      gap: 1.5rem;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  @keyframes navbar {
+    from {
+      height: 0rem;
+    }
+    to {
+      height: 20rem;
     }
   }
 }

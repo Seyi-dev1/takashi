@@ -6,8 +6,12 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LOGO from "../../assets/logo.png";
 import CButton from "../custom-button/CButton";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
+import { IoMdArrowDropright } from "react-icons/io";
 const Navbar = () => {
   const navigate = useNavigate();
+  const [nav, setNav] = useState(false);
   return (
     <div className={styles.main}>
       <div className={styles.contact_nav}>
@@ -114,10 +118,98 @@ const Navbar = () => {
             <span className={styles.line}></span>
           </div>
         </div>
-        <CButton size="big" onClick={() => navigate("/login")}>
-          Login
-        </CButton>
+        <div className={styles.btn_con}>
+          <CButton size="big" onClick={() => navigate("/login")}>
+            Login
+          </CButton>
+        </div>
+
+        <div className={styles.mobile}>
+          <span className={styles.hamburger} onClick={() => setNav(!nav)}>
+            <GiHamburgerMenu className={styles.icon} />
+          </span>
+        </div>
       </div>
+      {nav && (
+        <div className={styles.mobile_nav}>
+          <div className={styles.item}>
+            <IoMdArrowDropright />
+            <NavLink
+              to="/"
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive && "red",
+                };
+              }}
+              onClick={() => setNav(false)}
+            >
+              Home
+            </NavLink>
+          </div>
+          <div className={styles.item}>
+            <IoMdArrowDropright />
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive && "red",
+                };
+              }}
+              to="/services"
+              onClick={() => setNav(false)}
+            >
+              Services
+            </NavLink>
+          </div>
+          <div className={styles.item}>
+            <IoMdArrowDropright />
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive && "red",
+                };
+              }}
+              to="/about"
+              onClick={() => setNav(false)}
+            >
+              About
+            </NavLink>
+          </div>
+          <div className={styles.item}>
+            <IoMdArrowDropright />
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive && "red",
+                };
+              }}
+              to="/contact"
+              onClick={() => setNav(false)}
+            >
+              Contact
+            </NavLink>
+          </div>
+          <div className={styles.item}>
+            <IoMdArrowDropright />
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive && "red",
+                };
+              }}
+              to="/services"
+              onClick={() => setNav(false)}
+            >
+              Money Transfer
+            </NavLink>
+          </div>
+          <CButton onClick={() => navigate("/login")}>Sign In</CButton>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,0 +1,179 @@
+.main {
+  padding: 4rem 10rem;
+  background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0),
+      rgb(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.8),
+      rgba(255, 255, 255, 0.978),
+      rgb(246, 246, 246)
+    ),
+    url("../../../../assets/iphone-15@2x.png");
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (max-width: 800px) {
+    padding: 1rem;
+  }
+  .header {
+    color: #ffffff;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+    font-family: "Poppins";
+    font-style: italic;
+    margin-top: 3rem;
+    max-width: 70%;
+
+    span {
+      color: #d10000;
+      font-family: "Poppins";
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+  }
+
+  .duoCon {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .duo {
+      font-size: 1rem;
+      line-height: 1.6rem;
+      color: #9b9b9b;
+    }
+  }
+
+  .contact {
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 6rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media screen and (max-width: 800px) {
+      padding: 2rem;
+    }
+
+    .header2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: "Montserrat";
+      color: black;
+      font-style: normal;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .inputCon {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @media screen and (max-width: 800px) {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .input {
+          width: 100%;
+          padding: 1rem;
+          outline: none;
+          border: none;
+          background-color: #f4f4f4;
+          color: #9b9b9b;
+        }
+      }
+
+      .textArea {
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: #f4f4f4;
+        color: #9b9b9b;
+        padding: 1rem;
+        min-height: 8rem;
+      }
+
+      .btn {
+        padding: 1.5rem;
+        outline: none;
+        border: none;
+        background-color: #d10000;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: 200ms ease-in;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #ed3333;
+        }
+      }
+    }
+  }
+  .details {
+    padding: 3rem 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    @media screen and (max-width: 800px) {
+      gap: 1rem;
+      padding: 2rem 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      gap: 1rem;
+      background-color: #ff050516;
+
+      .icon {
+        color: #d10000;
+        font-size: 1.5rem;
+      }
+      .second {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        .title {
+          font-weight: 500;
+          font-size: 1.2rem;
+
+          @media screen and (max-width: 800px) {
+            font-size: 1rem;
+          }
+        }
+
+        .desc {
+          font-size: 1rem;
+          font-weight: 400;
+
+          @media screen and (max-width: 800px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

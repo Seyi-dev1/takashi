@@ -6,6 +6,11 @@
   align-items: center;
   background-color: azure;
 
+  @media screen and (max-width: 800px) {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
   .small {
     font-size: 0.8rem;
     color: #d10000;
@@ -16,6 +21,10 @@
     color: #01949a;
     font-weight: 600;
     text-align: center;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
   }
 
   .container {
@@ -23,6 +32,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 2rem;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-content: center;
+    }
 
     .item {
       display: flex;
@@ -43,12 +57,19 @@
           font-size: 1.3rem;
           font-weight: 500;
           color: #d10000;
+
+          @media screen and (max-width: 800px) {
+            font-size: 1rem;
+          }
         }
       }
 
       .desc {
         font-size: 1rem;
         color: black;
+        @media screen and (max-width: 800px) {
+          font-size: 0.9rem;
+        }
       }
     }
   }
