@@ -1,4 +1,3 @@
-import Footer from "../../../../components/footer/footer";
 import Hero from "../../../../components/hero/hero";
 import SectionOne from "../../../../components/section-1/SectionOne";
 import SectionTwo from "../../../../components/section-2/SectionTwo";
@@ -23,7 +22,6 @@ const Homepage = () => {
       <SectionFour />
       <SectionFive />
       <Testimonial />
-      <Footer />
     </div>
   );
 };
