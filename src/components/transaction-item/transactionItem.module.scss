@@ -1,0 +1,38 @@
+.transactionItem {
+  background-color: rgb(245, 243, 243);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  .description {
+    .title {
+      font-size: 0.7rem;
+      @media screen and (max-width: 800px) {
+        font-size: 0.6rem;
+      }
+    }
+    .date {
+      margin-top: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: grey;
+       @media screen and (max-width: 800px) {
+    font-size: 0.6rem;
+  }
+    }
+  }
+
+  .amount {
+    color: rgb(46, 46, 46);
+    font-size: 0.9rem;
+    @media screen and (max-width: 800px) {
+      font-size: 0.7rem;
+    }
+    h3 {
+      font-weight: 600;
+    }
+  }
+}

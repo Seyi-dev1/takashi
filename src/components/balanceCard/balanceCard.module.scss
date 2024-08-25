@@ -1,0 +1,55 @@
+.balanceCard {
+  // color: #fff;
+  background-color: rgb(244, 49, 49);
+  background-color: #fff;
+  width: 18rem;
+  padding: 1rem;
+  border-radius: 5px;
+  @media screen and (max-width: 800px) {
+    width: 20rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgb(145, 144, 144);
+      @media screen and (max-width: 800px) {
+        font-size: 0.7rem;
+      }
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      color: rgb(145, 144, 144);
+      @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .amount {
+    color: rgb(68, 68, 68);
+    @media screen and (max-width: 800px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .percentage {
+    margin-top: 1rem;
+    font-weight: 500;
+    @media screen and (max-width: 800px) {
+      font-size: 0.9rem;
+    }
+
+    &.positive {
+      color: rgb(4, 186, 4);
+    }
+    &.negative {
+      color: rgb(249, 61, 61);
+    }
+  }
+}
