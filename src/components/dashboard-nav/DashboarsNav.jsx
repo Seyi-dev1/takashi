@@ -69,7 +69,7 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/transfer"
+              to="/dashboard/transfer"
             >
               Send Funds
             </NavLink>
@@ -83,7 +83,7 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/receive"
+              to="/dashboard/receive"
             >
               Receive Funds
             </NavLink>
@@ -97,7 +97,7 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/transactions"
+              to="/dashboard/transactions"
             >
               Transactions
             </NavLink>
@@ -111,7 +111,7 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/settings"
+              to="/dashbaord/settings"
             >
               Settings
             </NavLink>
