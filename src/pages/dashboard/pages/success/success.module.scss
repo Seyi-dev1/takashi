@@ -1,0 +1,33 @@
+.main {
+  width: 100%;
+  margin-top: 4rem;
+  background-color: #efefef;
+  padding: 3rem;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    color: orangered;
+    text-align: center;
+  }
+
+  .icon {
+    color: green;
+    font-size: 5rem;
+  }
+
+  .link {
+    font-size: 1rem;
+    color: black;
+    font-weight: 700;
+    background-color: orange;
+    padding: 0.7rem;
+    text-decoration: none;
+    text-align: center;
+  }
+}
