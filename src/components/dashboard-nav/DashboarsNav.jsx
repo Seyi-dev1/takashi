@@ -111,7 +111,7 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/dashbaord/settings"
+              to="/dashboard/settings"
             >
               Settings
             </NavLink>
