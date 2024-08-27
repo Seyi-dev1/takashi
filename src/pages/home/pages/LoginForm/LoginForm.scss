@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-page {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .image {
+      margin-bottom: 1rem;
+      // margin-top: 10rem;
+      object-fit: cover;
+      justify-self: center;
+      transform: scale(0.8);
+    }
+
+    .login_container {
+      height: fit-content;
+      width: 500px;
+      background: #fff;
+      box-shadow: 0px 0px 31px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      // padding: 24px 24px;
+
+      .login_content {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #d10000;
+          margin-bottom: 20px;
+        }
+
+        .subtitle {
+          font-size: 16px;
+          font-weight: 400;
+          color: #3a3a3a;
+        }
+        .form {
+          .subtitle1 {
+            font-size: 12px;
+            font-weight: 400;
+            color: #d10000;
+            text-decoration: none;
+          }
+          .password {
+            display: flex;
+            align-content: center;
+            gap: 10px;
+
+            .password-toggle {
+              align-self: center;
+              margin-top: 24px;
+            }
+          }
+
+          .loader_con {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .error {
+            font-size: 10px;
+            color: crimson;
+            text-align: center;
+            width: 300px;
+            align-self: center;
+            margin: 0 auto;
+          }
+        }
+
+        .linker_cont {
+          .sub {
+            font-size: 12px;
+            font-weight: 400;
+            color: #3a3a3a;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    height: 100vh;
+
+    .login-page {
+      height: 100vh;
+      padding-bottom: 5rem;
+      .image {
+        margin-bottom: 1rem;
+        // margin-top: 1rem;
+        object-fit: cover;
+        justify-self: center;
+        transform: scale(0.8);
+      }
+      .loaderdiv {
+        position: absolute;
+        align-self: center;
+        justify-self: center;
+      }
+      .login_container {
+        height: fit-content;
+        width: 300px;
+        .login_content {
+          .title {
+            font-size: 14px;
+          }
+
+          .subtitle {
+            font-size: 12px;
+          }
+          .form {
+            label {
+              font-size: 12px;
+            }
+            input {
+              width: 200px;
+              font-size: 10px;
+              height: 30px;
+            }
+
+            button {
+              width: 200px;
+              font-size: 10px;
+              height: 30px;
+            }
+            .subtitle1 {
+              font-size: 10px;
+            }
+            .button {
+              margin: 20px 0px 10px 0px;
+            }
+            .error {
+              font-size: 10px;
+              color: crimson;
+              text-align: center;
+              width: 200px;
+            }
+            .linker_cont {
+              .sub {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper {
+      display: none;
+    }
+  }
+}

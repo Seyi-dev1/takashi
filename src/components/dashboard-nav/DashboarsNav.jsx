@@ -83,20 +83,6 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/dashboard/receive"
-            >
-              Receive Funds
-            </NavLink>
-            <span className={styles.line}></span>
-          </div>
-          <div className={styles.item}>
-            <NavLink
-              style={({ isActive }) => {
-                return {
-                  fontWeight: isActive ? "bold" : "",
-                  color: isActive && "red",
-                };
-              }}
               to="/dashboard/transactions"
             >
               Transactions

@@ -10,7 +10,6 @@ import hero3 from "../../assets/hero-slide-6.png";
 import { TfiAngleRight } from "react-icons/tfi";
 import { TfiAngleLeft } from "react-icons/tfi";
 
-import React, { useEffect } from "react";
 import CButton from "../custom-button/CButton";
 
 const Hero = () => {
@@ -36,7 +35,6 @@ const Hero = () => {
         loop={true}
         speed={1000}
         modules={[Navigation, Pagination, Autoplay]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <div className="container">
@@ -54,7 +52,7 @@ const Hero = () => {
                 </p>
               </div>
               <div className="mybutton">
-                <CButton children={"Get Started"} />
+                <CButton>Get Started</CButton>
               </div>
             </div>
             <div className="image">
@@ -78,7 +76,7 @@ const Hero = () => {
                 </p>
               </div>
               <div className="mybutton">
-                <CButton children={"Get Started"} />
+                <CButton>Get Started</CButton>
               </div>
             </div>
             <div className="image">
@@ -102,7 +100,7 @@ const Hero = () => {
                 </p>
               </div>
               <div className="mybutton">
-                <CButton children={"Get Started"} />
+                <CButton>Get Started</CButton>
               </div>
             </div>
             <div className="image">
