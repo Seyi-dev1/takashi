@@ -9,7 +9,32 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { FaPaperPlane } from "react-icons/fa";
 import { GrTransaction } from "react-icons/gr";
 import { IoMdSettings } from "react-icons/io";
+import { onSnapshot, doc } from "firebase/firestore";
+import { database } from "../../../../firebase/firebase.utils";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const Account = () => {
+  const navigate = useNavigate();
+  const user = window.localStorage.getItem("user");
+  const { firstName, fixedDeposit, savingsAccount, checkingBalance, id } =
+    JSON.parse(user);
+  const totalBalance = Number(fixedDeposit + savingsAccount + checkingBalance);
+  useEffect(() => {
+    const unsub = onSnapshot(doc(database, `/users/${id}`), (doc) => {
+      console.log("Current data: ", doc.data());
+      const profile = doc.data();
+      const updatedData = {
+        id: id,
+        ...profile,
+      };
+      console.log(updatedData);
+      window.localStorage.setItem("user", JSON.stringify(updatedData));
+    });
+    return () => {
+      unsub();
+    };
+  });
+  console.log(user);
   return (
     <div className={styles.accountOverview}>
       <div className={styles.header}>
@@ -18,37 +43,40 @@ const Account = () => {
             <img src={photo} alt="profile" />
           </div>
           <div className={styles.greeting}>
-            <h2>Welcome back, Mike!</h2>
+            <h2>Welcome back, {firstName}!</h2>
           </div>
         </div>
-        <div className={styles.icon}>
+        <div
+          className={styles.icon}
+          onClick={() => navigate("/dashboard/settings")}
+        >
           <FaUser />
         </div>
       </div>
 
       <div className={styles.balances}>
         <BalanceCard
-          title={"Total Revenue"}
+          title={"Total Balance"}
           icon={<BsCashCoin />}
-          amount={"$150,000"}
+          amount={totalBalance}
           percentage="+15%"
         />
         <BalanceCard
-          title={"Total Expenses"}
+          title={"Checking Account"}
           icon={<BsCashCoin />}
-          amount={"$50,000"}
+          amount={checkingBalance}
           percentage="+15%"
         />
         <BalanceCard
-          title={"Net Profit"}
+          title={"Savings"}
           icon={<BsCashCoin />}
-          amount={"$100,000"}
+          amount={savingsAccount}
           percentage="+15%"
         />
         <BalanceCard
-          title={"Cash Flow"}
+          title={"Fixed Deposit"}
           icon={<BsCashCoin />}
-          amount={"$24,000"}
+          amount={fixedDeposit}
           percentage="-5%"
         />
       </div>
