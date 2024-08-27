@@ -25,9 +25,10 @@ const SignUp = () => {
     accountType: "",
     pin: "",
     password: "",
-    accountBalance: "",
-    checkingBalance: "",
-    overDraft: "",
+    fixedDeposit: 0,
+    savingsAccount: 0,
+    checkingBalance: 0,
+    overDraft: 0,
   });
   const [passwordShown, setPasswordShown] = useState(false);
 
