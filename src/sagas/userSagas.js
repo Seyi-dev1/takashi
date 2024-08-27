@@ -59,8 +59,9 @@ export function* signUp({ payload }) {
     country,
     accountType,
     pin,
-    accountBalance,
     checkingBalance,
+    savingsAccount,
+    fixedDeposit,
     overDraft,
     password,
   } = payload;
@@ -81,9 +82,10 @@ export function* signUp({ payload }) {
           country,
           accountType,
           pin,
-          accountBalance,
           checkingBalance,
           overDraft,
+          savingsAccount,
+          fixedDeposit,
         },
       })
     );

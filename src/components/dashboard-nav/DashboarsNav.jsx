@@ -9,8 +9,15 @@ import CButton from "../custom-button/CButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { IoMdArrowDropright } from "react-icons/io";
+import { startSignOut } from "../../redux/user/userReducer";
+import { useDispatch } from "react-redux";
 const DashboarsNav = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const signOut = () => {
+    dispatch(startSignOut());
+    navigate("/");
+  };
   const [nav, setNav] = useState(false);
   return (
     <div className={styles.main}>
@@ -105,8 +112,8 @@ const DashboarsNav = () => {
           </div>
         </div>
         <div className={styles.btn_con}>
-          <CButton size="big" onClick={() => navigate("/login")}>
-            Login
+          <CButton size="big" onClick={signOut}>
+            Logout
           </CButton>
         </div>
 
@@ -121,7 +128,7 @@ const DashboarsNav = () => {
           <div className={styles.item}>
             <IoMdArrowDropright />
             <NavLink
-              to="/"
+              to="/dashboard"
               style={({ isActive }) => {
                 return {
                   fontWeight: isActive ? "bold" : "",
@@ -130,7 +137,7 @@ const DashboarsNav = () => {
               }}
               onClick={() => setNav(false)}
             >
-              Home
+              Account Overview
             </NavLink>
           </div>
           <div className={styles.item}>
@@ -142,10 +149,10 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/services"
+              to="/dashboard/transfer"
               onClick={() => setNav(false)}
             >
-              Services
+              Send Funds
             </NavLink>
           </div>
           <div className={styles.item}>
@@ -157,10 +164,10 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/about"
+              to="/dashboard/transactions"
               onClick={() => setNav(false)}
             >
-              About
+              Transactions
             </NavLink>
           </div>
           <div className={styles.item}>
@@ -172,28 +179,13 @@ const DashboarsNav = () => {
                   color: isActive && "red",
                 };
               }}
-              to="/contact"
+              to="/dashboard/settings"
               onClick={() => setNav(false)}
             >
-              Contact
+              Settings
             </NavLink>
           </div>
-          <div className={styles.item}>
-            <IoMdArrowDropright />
-            <NavLink
-              style={({ isActive }) => {
-                return {
-                  fontWeight: isActive ? "bold" : "",
-                  color: isActive && "red",
-                };
-              }}
-              to="/services"
-              onClick={() => setNav(false)}
-            >
-              Money Transfer
-            </NavLink>
-          </div>
-          <CButton onClick={() => navigate("/login")}>Sign In</CButton>
+          <CButton onClick={() => signOut()}>Log out</CButton>
         </div>
       )}
     </div>
