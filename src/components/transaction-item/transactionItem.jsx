@@ -14,7 +14,7 @@ const TransactionItem = ({ title, date, amount }) => {
         </div>
       </div>
       <div className={styles.amount}>
-        <h3>{amount}</h3>
+        <h3>${amount}</h3>
       </div>
     </div>
   );

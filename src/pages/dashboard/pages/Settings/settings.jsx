@@ -1,15 +1,17 @@
 import styles from "./settings.module.scss";
-import React from "react";
 import { FaUser } from "react-icons/fa6";
 
 const Settings = () => {
+  const user = window.localStorage.getItem("user");
+  const { firstName, email, lastName, country, phone, address } =
+    JSON.parse(user);
   return (
     <div className={styles.settings}>
       <div className={styles.profilePic}>
         <FaUser />
       </div>
       <div className={styles.email}>
-        <p>bozoslai@loserpool.com</p>
+        <p>{email}</p>
       </div>
       <div className={styles.details}>
         <div className={styles.detailPair}>
@@ -17,7 +19,7 @@ const Settings = () => {
             <p>First Name</p>
           </div>
           <div className={styles.value}>
-            <p>Dominik Bozoslai</p>
+            <p>{firstName}</p>
           </div>
         </div>
         <div className={styles.detailPair}>
@@ -25,7 +27,7 @@ const Settings = () => {
             <p>Last Name</p>
           </div>
           <div className={styles.value}>
-            <p>Arne slutt</p>
+            <p>{lastName}</p>
           </div>
         </div>
         <div className={styles.detailPair}>
@@ -33,7 +35,7 @@ const Settings = () => {
             <p>Nationality</p>
           </div>
           <div className={styles.value}>
-            <p>Scouse</p>
+            <p>{country}</p>
           </div>
         </div>
         <div className={styles.detailPair}>
@@ -49,7 +51,7 @@ const Settings = () => {
             <p>Phone</p>
           </div>
           <div className={styles.value}>
-            <p>55531128</p>
+            <p>{phone}</p>
           </div>
         </div>
         <div className={styles.detailPair}>
@@ -57,7 +59,7 @@ const Settings = () => {
             <p>Addres</p>
           </div>
           <div className={styles.value}>
-            <p>Anfield, Loserpool</p>
+            <p>{address}</p>
           </div>
         </div>
       </div>
