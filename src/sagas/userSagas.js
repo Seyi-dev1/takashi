@@ -65,6 +65,8 @@ export function* signUp({ payload }) {
     fixedDeposit,
     overDraft,
     password,
+    withdrawals,
+    deposits,
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -88,6 +90,8 @@ export function* signUp({ payload }) {
           overDraft,
           savingsAccount,
           fixedDeposit,
+          withdrawals,
+          deposits,
         },
       })
     );

@@ -30,6 +30,8 @@ const SignUp = () => {
     savingsAccount: 0,
     checkingBalance: 0,
     overDraft: 0,
+    withdrawals: [],
+    deposits: [],
   });
   const [passwordShown, setPasswordShown] = useState(false);
 
