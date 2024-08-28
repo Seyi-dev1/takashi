@@ -11,6 +11,12 @@ const Transfers = () => {
   const [selectedValue, setSelectedValue] = useState("option1");
   const [modal, setModal] = useState(false);
   const user = useSelector((state) => selectCurrentUser(state));
+  const date = new Date();
+  const year = date.getFullYear();
+  const currentMonth = String(date.getMonth() + 1).padStart(2, "0");
+  const thisDay = String(date.getDate()).padStart(2, "0");
+
+  const formattedDate = `${year}-${currentMonth}-${thisDay}`;
   const [info, setInfo] = useState({
     user: user,
     name: "",
@@ -25,7 +31,9 @@ const Transfers = () => {
     sortingCode: "",
     desc: "",
     pin: "",
+    date: formattedDate,
   });
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setInfo((prevValue) => ({
