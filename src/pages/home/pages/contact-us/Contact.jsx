@@ -10,15 +10,15 @@ const Contact = () => {
       </span>
       <div className={styles.duoCon}>
         <span className={styles.duo}>
-          Haven Offshore Bank have grown to become one of the largest digital
-          banking providers, committed to inventing, simplifying, and humanizing
-          the banking experience.
+          City Trust Offshore Bank have grown to become one of the largest
+          digital banking providers, committed to inventing, simplifying, and
+          humanizing the banking experience.
         </span>
         <div className={styles.duo}>
-          Haven Offshore Bank transformed the credit card business using data
-          and technology more than ten years ago. We are now one of the largest
-          digital banking providers, dedicated to innovating, simplifying, and
-          humanizing banking.
+          City Trust Offshore Bank transformed the credit card business using
+          data and technology more than ten years ago. We are now one of the
+          largest digital banking providers, dedicated to innovating,
+          simplifying, and humanizing banking.
         </div>
       </div>
       <div className={styles.contact}>
@@ -65,14 +65,16 @@ const Contact = () => {
           <IoIosCall className={styles.icon} />
           <div className={styles.second}>
             <span className={styles.title}>Email Us</span>
-            <span className={styles.desc}>support@havenbank.com</span>
+            <span className={styles.desc}>
+              support@citytrustoffshorebank.com
+            </span>
           </div>
         </div>
         <div className={styles.item}>
           <IoMail className={styles.icon} />
           <div className={styles.second}>
             <span className={styles.title}>Call Us</span>
-            <span className={styles.desc}>+55 576 234532</span>
+            <span className={styles.desc}>+1(380)710-4336</span>
           </div>
         </div>
       </div>

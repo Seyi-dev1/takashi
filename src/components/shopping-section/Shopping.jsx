@@ -10,10 +10,10 @@ const Shopping = () => {
         <span className={styles.intro}>Online Shopping</span>
         <span className={styles.big}>We are innovative and digital</span>
         <span className={styles.desc}>
-          Haven Offshore Bank transformed the credit card business using data
-          and technology more than ten years ago. We are now one of the largest
-          digital banking providers, dedicated to innovating, simplifying, and
-          humanizing banking.
+          City Trust Offshore Bank transformed the credit card business using
+          data and technology more than ten years ago. We are now one of the
+          largest digital banking providers, dedicated to innovating,
+          simplifying, and humanizing banking.
         </span>
         <div className={styles.list}>
           <span className={styles.item}>

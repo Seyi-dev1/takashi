@@ -8,7 +8,7 @@ const About = () => {
     <div className={styles.main}>
       <SectionOne
         title="We Revolutionized Digital Banking"
-        desc="Haven Offshore Bank have grown to become one of the largest digital banking providers, committed to inventing, simplifying, and humanizing the banking experience."
+        desc="City Trust Offshore Bank have grown to become one of the largest digital banking providers, committed to inventing, simplifying, and humanizing the banking experience."
       />
       <SectionFour />
       <Shopping />

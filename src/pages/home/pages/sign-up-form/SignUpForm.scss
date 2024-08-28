@@ -22,6 +22,7 @@
     }
     .image {
       object-fit: cover;
+      width: 200px;
       justify-self: center;
       margin-bottom: 1rem;
       // margin-top: 10rem;
@@ -131,8 +132,7 @@
         object-fit: cover;
         justify-self: center;
         margin-bottom: 1rem;
-        margin-top: 3rem;
-        transform: scale(0.8);
+        margin-top: 15rem;
       }
 
       .signup_container {
