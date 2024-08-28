@@ -1,9 +1,20 @@
+import { useEffect, useState } from "react";
 import TransactionItem from "../../../../components/transaction-item/transactionItem";
 import styles from "./transactions.module.scss";
 
-import React from "react";
+import { transactions } from "./transactionsData";
 
 const Transactions = () => {
+  const [transactionsList, setTransactionList] = useState(transactions);
+  const user = window.localStorage.getItem("user");
+  const { withdrawals } = JSON.parse(user);
+  useEffect(() => {
+    const handleReverse = () => {
+      const newTransactions = [...transactionsList].reverse(); // Create a new array to avoid mutating state directly
+      setTransactionList(newTransactions);
+    };
+    handleReverse();
+  }, []);
   return (
     <div className={styles.transactions}>
       <div className={styles.table}>
@@ -11,32 +22,24 @@ const Transactions = () => {
           <p>Transactions</p>
         </div>
         <div className={styles.transactionsList}>
-          <TransactionItem
-            title={"Electricity Bill"}
-            date={"Jan 25, Checking"}
-            amount={"$100"}
-          />
-          <TransactionItem
-            title={"Electricity Bill"}
-            date={"Jan 25, Checking"}
-            amount={"$100"}
-          />
-          <TransactionItem
-            title={"Electricity Bill"}
-            date={"Jan 25, Checking"}
-            amount={"$100"}
-          />
-          <TransactionItem
-            title={"Electricity Bill"}
-            date={"Jan 25, Checking"}
-            amount={"$100"}
-          />
-          <TransactionItem
-            title={"Electricity Bill"}
-            date={"Jan 25, Checking"}
-            amount={"$100"}
-          />
+          {withdrawals.map((data) => (
+            <TransactionItem
+              key={data.accountNumber}
+              title={data.desc}
+              date={data.date}
+              amount={data.amount}
+            />
+          ))}
+          {transactionsList.map((data) => (
+            <TransactionItem
+              key={data.accountNumber}
+              title={data.desc}
+              date={data.date}
+              amount={data.amount}
+            />
+          ))}
         </div>
+        <p>view more</p>
       </div>
     </div>
   );

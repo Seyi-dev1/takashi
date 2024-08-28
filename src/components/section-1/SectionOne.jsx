@@ -3,7 +3,9 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import styles from "./sectionone.module.scss";
 import CButton from "../custom-button/CButton";
 import IMAGE from "../../assets/about-img-1.png";
+import { useNavigate } from "react-router-dom";
 const SectionOne = ({ desc, title }) => {
+  const navigate = useNavigate();
   return (
     <div className={styles.main}>
       <div className={styles.img_con}>
@@ -27,7 +29,9 @@ const SectionOne = ({ desc, title }) => {
             No ATM fees. No minimum balance. No overdrafts.
           </span>
         </div>
-        <CButton type="light">Get Started</CButton>
+        <CButton type="light" onClick={() => navigate("/login")}>
+          Get Started
+        </CButton>
       </div>
     </div>
   );

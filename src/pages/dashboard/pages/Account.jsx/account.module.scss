@@ -77,7 +77,8 @@
       background-color: #fff;
       padding: 1rem 2rem;
       border-radius: 5px;
-      height: 30rem;
+      min-height: 10rem;
+      height: fit-content;
       overflow: scroll;
       &::-webkit-scrollbar {
         display: none;

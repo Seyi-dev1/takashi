@@ -67,6 +67,7 @@
     .logo_con {
       .logo {
         //! spcify size later
+        width: 80px;
         @media screen and (max-width: 800px) {
           width: 100px;
         }

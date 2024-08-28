@@ -12,9 +12,9 @@ const Homepage = () => {
       <Hero />
       <SectionOne
         title="The Better Way To Save & Invest Online"
-        desc="Your Haven Offshore Bank account is your key to unlocking a universe
+        desc="Your City Trust Offshore Bank account is your key to unlocking a universe
           of opportunities. Whether making international payments, receiving
-          funds, managing your digital business, or accessing capital, Haven
+          funds, managing your digital business, or accessing capital, City Trust
           Offshore Bank opens your business up to the world."
       />
       <SectionTwo />

@@ -18,11 +18,11 @@ const Navbar = () => {
         <div className={styles.first}>
           <span className={styles.info}>
             <FaPhone className={styles.icon} />
-            +1(903)-3456-3452
+            +1(380)710-4336
           </span>
           <span className={styles.info}>
             <IoMail className={styles.icon} />
-            info@heavenoffshore.com
+            info@citytrustoffshorebank.com
           </span>
           <span className={styles.info}>
             <MdLocationPin className={styles.icon} />

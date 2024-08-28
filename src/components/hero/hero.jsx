@@ -11,8 +11,10 @@ import { TfiAngleRight } from "react-icons/tfi";
 import { TfiAngleLeft } from "react-icons/tfi";
 
 import CButton from "../custom-button/CButton";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="hero">
       <Swiper
@@ -47,12 +49,14 @@ const Hero = () => {
               </div>
               <div className="description">
                 <p>
-                  Haven Offshore bank transformed the digital banking industry
-                  more than ten years ago
+                  City Trust Offshore Bank transformed the digital banking
+                  industry more than ten years ago
                 </p>
               </div>
               <div className="mybutton">
-                <CButton>Get Started</CButton>
+                <CButton onClick={() => navigate("/login")}>
+                  Get Started
+                </CButton>
               </div>
             </div>
             <div className="image">
@@ -64,19 +68,21 @@ const Hero = () => {
           <div className="container">
             <div className="text">
               <div className="catch">
-                <span>Easy Fast Secure</span>
+                <span>Efficient, Transparent, Secured</span>
               </div>
               <div className="heading">
-                <h1>Secure and Easy Online Payment Solution</h1>
+                <h1>Fast and Secure Money Transfer</h1>
               </div>
               <div className="description">
                 <p>
-                  Haven Offshore bank transformed the digital banking industry
-                  more than ten years ago
+                  City Trust Offshore Bank transformed the digital banking
+                  industry more than ten years ago
                 </p>
               </div>
               <div className="mybutton">
-                <CButton>Get Started</CButton>
+                <CButton onClick={() => navigate("/login")}>
+                  Get Started
+                </CButton>
               </div>
             </div>
             <div className="image">
@@ -88,19 +94,21 @@ const Hero = () => {
           <div className="container">
             <div className="text">
               <div className="catch">
-                <span>Easy Fast Secure</span>
+                <span>Reliable, Zero Service Charge</span>
               </div>
               <div className="heading">
-                <h1>Secure and Easy Online Payment Solution</h1>
+                <h1>Move Money in secured and easy steps</h1>
               </div>
               <div className="description">
                 <p>
-                  Haven Offshore bank transformed the digital banking industry
-                  more than ten years ago
+                  City Trust Offshore Bank transformed the digital banking
+                  industry more than ten years ago
                 </p>
               </div>
               <div className="mybutton">
-                <CButton>Get Started</CButton>
+                <CButton onClick={() => navigate("/login")}>
+                  Get Started
+                </CButton>
               </div>
             </div>
             <div className="image">

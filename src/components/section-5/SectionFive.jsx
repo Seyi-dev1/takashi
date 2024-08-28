@@ -7,7 +7,7 @@ const SectionFive = () => {
       <div className={styles.info_con}>
         <span className={styles.intro}>Mobile Banking Solution</span>
         <span className={styles.big}>
-          Haven Offshore Bank Mobile App Lauching Soon
+          City Trust Offshore Bank Mobile App Lauching Soon
         </span>
         <span className={styles.desc}>
           24/7 accessibility: Mobile banking apps allow you to access your

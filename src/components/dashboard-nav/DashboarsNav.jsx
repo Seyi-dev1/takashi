@@ -29,7 +29,7 @@ const DashboarsNav = () => {
           </span>
           <span className={styles.info}>
             <IoMail className={styles.icon} />
-            info@heavenoffshore.com
+            info@citytrustoffshorebank.com
           </span>
           <span className={styles.info}>
             <MdLocationPin className={styles.icon} />

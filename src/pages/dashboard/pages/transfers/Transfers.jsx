@@ -4,11 +4,17 @@ import styles from "./transfers.module.scss";
 import { CiCircleCheck, CiCircleInfo, CiViewList } from "react-icons/ci";
 import { MoonLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { withdrawalStart } from "../../../../redux/payment/withdrawalReducer";
 const Transfers = () => {
   const [selectedValue, setSelectedValue] = useState("option1");
   const [modal, setModal] = useState(false);
+  const date = new Date();
+  const year = date.getFullYear();
+  const currentMonth = String(date.getMonth() + 1).padStart(2, "0");
+  const thisDay = String(date.getDate()).padStart(2, "0");
+
+  const formattedDate = `${year}-${currentMonth}-${thisDay}`;
   const user = window.localStorage.getItem("user");
   const { id } = JSON.parse(user);
   const [info, setInfo] = useState({
@@ -25,7 +31,9 @@ const Transfers = () => {
     sortingCode: "",
     desc: "",
     pin: "",
+    date: formattedDate,
   });
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setInfo((prevValue) => ({

@@ -16,8 +16,14 @@ import { useNavigate } from "react-router-dom";
 const Account = () => {
   const navigate = useNavigate();
   const user = window.localStorage.getItem("user");
-  const { firstName, fixedDeposit, savingsAccount, checkingBalance, id } =
-    JSON.parse(user);
+  const {
+    firstName,
+    fixedDeposit,
+    savingsAccount,
+    checkingBalance,
+    id,
+    withdrawals,
+  } = JSON.parse(user);
   const totalBalance = Number(fixedDeposit + savingsAccount + checkingBalance);
   useEffect(() => {
     const unsub = onSnapshot(doc(database, `/users/${id}`), (doc) => {
@@ -86,44 +92,35 @@ const Account = () => {
             <h2>Recent Transactions</h2>
           </div>
           <div className={styles.transactionsList}>
-            <TransactionItem
-              title={"Electricity Bill"}
-              date={"Jan 25, Checking"}
-              amount={"$100"}
-            />
-            <TransactionItem
-              title={"Electricity Bill"}
-              date={"Jan 25, Checking"}
-              amount={"$100"}
-            />
-            <TransactionItem
-              title={"Electricity Bill"}
-              date={"Jan 25, Checking"}
-              amount={"$100"}
-            />
-            <TransactionItem
-              title={"Electricity Bill"}
-              date={"Jan 25, Checking"}
-              amount={"$100"}
-            />
-            <TransactionItem
-              title={"Electricity Bill"}
-              date={"Jan 25, Checking"}
-              amount={"$100"}
-            />
+            {withdrawals.map((data) => (
+              <TransactionItem
+                key={data.accountNumber}
+                title={data.desc}
+                date={data?.date}
+                amount={data.amount}
+              />
+            ))}
           </div>
         </div>
         <div className={styles.operations}>
-          <OperationCard
-            icon={<FaMoneyBillTransfer />}
-            text={"Recieve Funds "}
-          />
-          <OperationCard
-            icon={<FaPaperPlane />}
-            text={"Transfer Funds Globally "}
-          />
-          <OperationCard icon={<GrTransaction />} text={"Transactions"} />
-          <OperationCard icon={<IoMdSettings />} text={"Settings"} />
+          <div onClick={() => navigate("/dashboard")}>
+            <OperationCard
+              icon={<FaMoneyBillTransfer />}
+              text={"Recieve Funds "}
+            />
+          </div>
+          <div onClick={() => navigate("/dashboard/transfer")}>
+            <OperationCard
+              icon={<FaPaperPlane />}
+              text={"Transfer Funds Globally "}
+            />
+          </div>
+          <div onClick={() => navigate("/dashboard/transactions")}>
+            <OperationCard icon={<GrTransaction />} text={"Transactions"} />
+          </div>
+          <div onClick={() => navigate("/dashboard/settings")}>
+            <OperationCard icon={<IoMdSettings />} text={"Settings"} />
+          </div>
         </div>
       </div>
     </div>

@@ -19,6 +19,7 @@ const SignUp = () => {
   const [inputs, setInputs] = useState({
     firstName: "",
     lastName: "",
+    address: "",
     email: "",
     phone: "",
     country: "",
@@ -95,6 +96,16 @@ const SignUp = () => {
                 id="lastName"
                 label="Lastname"
                 placeholder="last name"
+              />
+              <CInput
+                type="text"
+                handleChange={handleChange}
+                name="address"
+                value={inputs.address}
+                required={true}
+                id="address"
+                label="Home Address"
+                placeholder="your address"
               />
               <CInput
                 type="email"

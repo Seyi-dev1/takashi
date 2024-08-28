@@ -11,8 +11,6 @@ import client3 from "../../assets/client-3.jpg";
 import client4 from "../../assets/client-4.jpg";
 import client5 from "../../assets/client-5.jpg";
 import client6 from "../../assets/client-6.jpg";
-
-import React from "react";
 import TestimonialCard from "../testimonial-card/testimonialCard";
 
 const Testimonial = () => {
@@ -44,60 +42,60 @@ const Testimonial = () => {
             <TestimonialCard
               image={client1}
               description={
-                "Haven offshore bank has a deeper connection with their target audience. Emotional connection is a critical driver in long term association with a brand."
+                "City Trust Offshore Bank has been a fantastic choice for managing my retirement funds. Their offshore accounts offer great benefits, and I appreciate the security and privacy they provide. The customer service is top-notch, always ready to assist with any questions."
               }
-              name={"Tom Harris"}
-              position={"Enginner, Olleo"}
+              name={"David H."}
+              position={"Retiree"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
               image={client2}
               description={
-                "Haven offshore bank has a deeper connection with their target audience. Emotional connection is a critical driver in long term association with a brand."
+                "City Trust Offshore Bank offers a level of service that is unmatched. Their expertise in international markets has allowed me to expand my real estate investments globally with ease. They truly understand the needs of their clients."
               }
-              name={"Tom Harris"}
-              position={"Enginner, Olleo"}
+              name={"Ahmed Khana"}
+              position={"Real Estate Developer"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
               image={client3}
               description={
-                "Haven offshore bank has a deeper connection with their target audience. Emotional connection is a critical driver in long term association with a brand."
+                "Opening an account with City Trust Offshore Bank was one of the best decisions I made for my startup. The process was straightforward, and their support has been invaluable. I feel confident knowing my finances are in good hands."
               }
-              name={"Tom Harris"}
-              position={"Enginner, Olleo"}
+              name={"Emily K."}
+              position={"Tech Guru"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
               image={client4}
               description={
-                "Haven offshore bank has a deeper connection with their target audience. Emotional connection is a critical driver in long term association with a brand."
+                "I was initially hesitant about offshore banking, but City Trust Offshore Bank exceeded all my expectations. The team is knowledgeable and responsive, and their investment solutions have significantly improved my portfolio's performance. Highly recommend!"
               }
-              name={"Tom Harris"}
-              position={"Enginner, Olleo"}
+              name={"Carlos G"}
+              position={"Investor"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
               image={client5}
               description={
-                "Haven offshore bank has a deeper connection with their target audience. Emotional connection is a critical driver in long term association with a brand."
+                "City Trust Offshore Bank has been an incredible partner for my business. Their personalized service and attention to detail have helped streamline our financial operations, making international transactions seamless and secure. I couldn't ask for a better banking experience"
               }
-              name={"Tom Harris"}
-              position={"Enginner, Olleo"}
+              name={"Jane M."}
+              position={"Small Business Owner"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <TestimonialCard
               image={client6}
               description={
-                "Haven offshore bank has a deeper connection with their target audience. Emotional connection is a critical driver in long term association with a brand."
+                "As an expat, managing finances across multiple countries can be challenging. City Trust Offshore Bank made it simple with their flexible account options and excellent customer service. It's a relief to have a bank that understands my unique situation."
               }
-              name={"Tom Harris"}
-              position={"Enginner, Olleo"}
+              name={"Sophie L"}
+              position={"Expatrait"}
             />
           </SwiperSlide>
         </Swiper>

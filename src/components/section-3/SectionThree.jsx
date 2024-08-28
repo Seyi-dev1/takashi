@@ -3,7 +3,9 @@ import SECURITY2 from "../../assets/security-icon-2.png";
 import styles from "./sectionthree.module.scss";
 import CButton from "../custom-button/CButton";
 import IMAGE from "../../assets/security-1.png";
+import { useNavigate } from "react-router-dom";
 const SectionThree = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.main}>
       <div className={styles.info_con}>
@@ -40,7 +42,9 @@ const SectionThree = () => {
             </div>
           </div>
         </div>
-        <CButton type="light">Get Started</CButton>
+        <CButton type="light" onClick={() => navigate("/login")}>
+          Get Started
+        </CButton>
       </div>
       <div className={styles.img_con}>
         <img src={IMAGE} alt="about" className={styles.image} />

@@ -1,24 +1,26 @@
 import styles from "./footer.module.scss";
 import React from "react";
 import { LiaAngleRightSolid } from "react-icons/lia";
-import logo from "../../assets/logo-white.png";
+import logo from "../../assets/logo.png";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.footer}>
       <div className={styles.columns}>
         <div className={styles.info}>
           <div className={styles.logo}>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className={styles.image} />
           </div>
           <div className={styles.description}>
             <p>
-              Haven Offshore Bank transformed the digital banking industry using
-              data and technology more than ten years ago.
+              City Trust Offshore Bank transformed the digital banking industry
+              using data and technology more than ten years ago.
             </p>
           </div>
           <div className={styles.socials}>
@@ -55,7 +57,10 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div
+                className={styles.text}
+                onClick={() => navigate("/services")}
+              >
                 <p>Our Services</p>
               </div>
             </div>
@@ -63,7 +68,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/contact")}>
                 <p>Contact Us</p>
               </div>
             </div>
@@ -71,7 +76,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Login</p>
               </div>
             </div>
@@ -79,7 +84,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Register</p>
               </div>
             </div>
@@ -95,7 +100,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Online Payment</p>
               </div>
             </div>
@@ -103,7 +108,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Deposit</p>
               </div>
             </div>
@@ -111,7 +116,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Online Shopping</p>
               </div>
             </div>
@@ -119,7 +124,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Receive Money</p>
               </div>
             </div>
@@ -127,7 +132,7 @@ const Footer = () => {
               <div className={styles.icon}>
                 <LiaAngleRightSolid />
               </div>
-              <div className={styles.text}>
+              <div className={styles.text} onClick={() => navigate("/login")}>
                 <p>Affiliate Programme</p>
               </div>
             </div>
@@ -151,7 +156,7 @@ const Footer = () => {
       </div>
       <div className={styles.line}></div>
       <div className={styles.rights}>
-        © 2024 Haven Offshore Bank. All Rights Reserved
+        © 2024 City Trust Offshore Bank. All Rights Reserved
       </div>
     </div>
   );
