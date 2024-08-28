@@ -6,13 +6,13 @@ import { MoonLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { withdrawalStart } from "../../../../redux/payment/withdrawalReducer";
-import { selectCurrentUser } from "../../../../redux/user/userSelector";
 const Transfers = () => {
   const [selectedValue, setSelectedValue] = useState("option1");
   const [modal, setModal] = useState(false);
-  const user = useSelector((state) => selectCurrentUser(state));
+  const user = window.localStorage.getItem("user");
+  const { id } = JSON.parse(user);
   const [info, setInfo] = useState({
-    user: user,
+    user: id,
     name: "",
     amount: 0,
     address: "",
@@ -60,7 +60,6 @@ const Transfers = () => {
     setTimeout(() => {
       setModal(false);
       navigate("/dashboard/success");
-      console.log(info);
     }, 5000);
   };
   const month = [
