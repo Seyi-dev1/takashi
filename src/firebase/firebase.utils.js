@@ -31,11 +31,12 @@ export const handleWithdrawals = async (userAuth, data) => {
   const userRef = doc(database, `/users/${userAuth}`);
   const snapShot = await getDoc(userRef);
   const prevData = snapShot.data();
-  console.log(prevData);
+  console.log(`prevData ${prevData}`);
   try {
     setDoc(userRef, {
       ...prevData,
       withdrawals: [...prevData.withdrawals, data],
+      checkingBalance: Number(prevData.checkingBalance - Number(data.amount)),
     });
   } catch (error) {
     console.log(error);
