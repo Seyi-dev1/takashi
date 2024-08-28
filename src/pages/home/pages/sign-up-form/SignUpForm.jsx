@@ -32,6 +32,7 @@ const SignUp = () => {
     overDraft: 0,
     withdrawals: [],
     deposits: [],
+    approved: false,
   });
   const [passwordShown, setPasswordShown] = useState(false);
 
@@ -64,7 +65,7 @@ const SignUp = () => {
   }
 
   useEffect(() => {
-    user && navigate("/dashboard");
+    user?.approved && navigate("/dashboard");
     window.localStorage.setItem("user", JSON.stringify(user));
     window.scrollTo(0, 0);
   }, [user, navigate]);
