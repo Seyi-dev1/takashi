@@ -11,9 +11,10 @@ import {
   selectCurrentUser,
   selectError,
   selectIsLoading,
+  selectSignUpDone,
 } from "../../../../redux/user/userSelector";
 import { useDispatch, useSelector } from "react-redux";
-import { signUpStart } from "../../../../redux/user/userReducer";
+import { signUpStart, signUpEnd } from "../../../../redux/user/userReducer";
 import { BarLoader } from "react-spinners";
 const SignUp = () => {
   const [inputs, setInputs] = useState({
@@ -33,6 +34,7 @@ const SignUp = () => {
     withdrawals: [],
     deposits: [],
     approved: false,
+    suspend: false,
   });
   const [passwordShown, setPasswordShown] = useState(false);
 
@@ -40,6 +42,7 @@ const SignUp = () => {
   const user = useSelector((state) => selectCurrentUser(state));
   const navigate = useNavigate();
   const isLoading = useSelector((state) => selectIsLoading(state));
+  const signUpDone = useSelector((state) => selectSignUpDone(state));
   const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
@@ -69,6 +72,16 @@ const SignUp = () => {
     window.localStorage.setItem("user", JSON.stringify(user));
     window.scrollTo(0, 0);
   }, [user, navigate]);
+
+  useEffect(() => {
+    if (signUpDone) {
+      alert("your application has been recieved and is under consideration");
+      setTimeout(() => {
+        dispatch(signUpEnd());
+        navigate("/");
+      }, 4000);
+    }
+  });
   return (
     <div className="container">
       <div className="signup-page">

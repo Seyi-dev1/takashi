@@ -68,6 +68,7 @@ export function* signUp({ payload }) {
     withdrawals,
     deposits,
     approved,
+    suspend,
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -94,6 +95,7 @@ export function* signUp({ payload }) {
           withdrawals,
           deposits,
           approved,
+          suspend,
         },
       })
     );

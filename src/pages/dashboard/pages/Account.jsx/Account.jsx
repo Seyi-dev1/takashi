@@ -23,6 +23,7 @@ const Account = () => {
     checkingBalance,
     id,
     withdrawals,
+    suspend,
   } = JSON.parse(user);
   const totalBalance = Number(fixedDeposit + savingsAccount + checkingBalance);
   useEffect(() => {
@@ -41,7 +42,17 @@ const Account = () => {
     };
   });
   console.log(user);
-  return (
+  return suspend ? (
+    <div className={styles.suspended}>
+      <div className={styles.text}>
+        <h3>
+          Your account has been banned due to suspicious activity, and your last
+          transaction unsuccessful. Please contact customer support to resolve
+          this issue.
+        </h3>
+      </div>
+    </div>
+  ) : (
     <div className={styles.accountOverview}>
       <div className={styles.header}>
         <div className={styles.personalInfo}>
