@@ -10,7 +10,7 @@ const withdrawalSlice = createSlice({
   reducers: {
     withdrawalSuccess: (state, action) => {
       state.isPaying = false;
-      state.payment = action.payload;
+      state.withdrawal = action.payload;
     },
     withdrawalFailure: (state, action) => {
       state.isPaying = false;

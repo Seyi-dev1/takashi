@@ -4,10 +4,15 @@ import styles from "./transfers.module.scss";
 import { CiCircleCheck, CiCircleInfo, CiViewList } from "react-icons/ci";
 import { MoonLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { withdrawalStart } from "../../../../redux/payment/withdrawalReducer";
+import { selectCurrentUser } from "../../../../redux/user/userSelector";
 const Transfers = () => {
   const [selectedValue, setSelectedValue] = useState("option1");
   const [modal, setModal] = useState(false);
+  const user = useSelector((state) => selectCurrentUser(state));
   const [info, setInfo] = useState({
+    user: user,
     name: "",
     amount: 0,
     address: "",
@@ -44,11 +49,14 @@ const Transfers = () => {
     }));
   };
   const navigate = useNavigate();
-  const handleSubmit = () => {
+  const dispatch = useDispatch();
+  const handleSubmit = async () => {
     if (info.pin !== "1945") {
       alert("incorrect PIN");
+      return;
     }
     setModal(true);
+    dispatch(withdrawalStart(info));
     setTimeout(() => {
       setModal(false);
       navigate("/dashboard/success");
