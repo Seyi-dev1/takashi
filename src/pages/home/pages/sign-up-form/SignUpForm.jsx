@@ -35,6 +35,7 @@ const SignUp = () => {
     deposits: [],
     approved: "unapproved",
     suspend: "unsuspended",
+    transactionStatus: "success",
   });
   const [passwordShown, setPasswordShown] = useState(false);
 

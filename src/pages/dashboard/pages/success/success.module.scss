@@ -19,6 +19,10 @@
   .icon {
     color: green;
     font-size: 5rem;
+
+    &.failed {
+      color: red;
+    }
   }
 
   .link {

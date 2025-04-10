@@ -69,6 +69,7 @@ export function* signUp({ payload }) {
     deposits,
     approved,
     suspend,
+    transactionStatus,
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -96,6 +97,7 @@ export function* signUp({ payload }) {
           deposits,
           approved,
           suspend,
+          transactionStatus,
         },
       })
     );

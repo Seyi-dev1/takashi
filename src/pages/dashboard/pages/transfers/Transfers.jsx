@@ -16,7 +16,7 @@ const Transfers = () => {
 
   const formattedDate = `${year}-${currentMonth}-${thisDay}`;
   const user = window.localStorage.getItem("user");
-  const { id } = JSON.parse(user);
+  const { id, transactionStatus } = JSON.parse(user);
   const [info, setInfo] = useState({
     user: id,
     name: "",
@@ -57,14 +57,19 @@ const Transfers = () => {
     }));
   };
   const navigate = useNavigate();
+
   const dispatch = useDispatch();
+
   const handleSubmit = async () => {
     if (info.pin !== "1945") {
       alert("incorrect PIN");
       return;
     }
     setModal(true);
-    dispatch(withdrawalStart(info));
+    if (transactionStatus === "success") {
+      dispatch(withdrawalStart(info));
+    }
+
     setTimeout(() => {
       setModal(false);
       navigate("/dashboard/success");

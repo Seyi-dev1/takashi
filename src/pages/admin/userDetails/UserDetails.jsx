@@ -137,6 +137,28 @@ const UserDetails = () => {
                 </span>
               )}
             </p>
+            <p>
+              <strong>Transaction Status:</strong>
+              {isEditing ? (
+                <select
+                  value={editedData.transactionStatus}
+                  onChange={(e) =>
+                    handleInputChange("transactionStatus", e.target.value)
+                  }
+                >
+                  <option value="success">Success</option>
+                  <option value="failure">Failure</option>
+                </select>
+              ) : (
+                <span
+                  data-status={
+                    user.transactionStatus === "success" ? "Success" : "Failure"
+                  }
+                >
+                  {user.transactionStatus === "success" ? "Success" : "Failure"}
+                </span>
+              )}
+            </p>
           </div>
 
           <div className={styles.balances}>
