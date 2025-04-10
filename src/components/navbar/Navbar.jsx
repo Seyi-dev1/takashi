@@ -26,7 +26,7 @@ const Navbar = () => {
           </span>
           <span className={styles.info}>
             <MdLocationPin className={styles.icon} />
-            United States
+            Australia
           </span>
         </div>
         <div className={styles.second}>

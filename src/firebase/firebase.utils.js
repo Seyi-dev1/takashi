@@ -3,12 +3,12 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCOUhiqUVCZg-3mcA2P1B94IHhROVwz9RQ",
-  authDomain: "bank-site-606ef.firebaseapp.com",
-  projectId: "bank-site-606ef",
-  storageBucket: "bank-site-606ef.appspot.com",
-  messagingSenderId: "993752705494",
-  appId: "1:993752705494:web:e6906e93f1b2bf21909c77",
+  apiKey: "AIzaSyCh3IWrlm2NItCNsh41CxcAbnGGn9GNh60",
+  authDomain: "takashii.firebaseapp.com",
+  projectId: "takashii",
+  storageBucket: "takashii.firebasestorage.app",
+  messagingSenderId: "237222858816",
+  appId: "1:237222858816:web:03ed66316598568c034fa5",
 };
 
 export const handleDeposit = async (userAuth, data) => {
