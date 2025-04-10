@@ -44,6 +44,9 @@ const userSlice = createSlice({
     signOutFailure: (state, action) => {
       console.log(action.payload);
     },
+    adminAuthenticated: (state, action) => {
+      state.isAdminAuthenticated = action.payload;
+    },
     checkUserSession: (state, action) => {},
   },
 });
@@ -61,6 +64,7 @@ export const {
   signOutSuccess,
   signOutFailure,
   checkUserSession,
+  adminAuthenticated,
 } = userSlice.actions;
 
 export default userSlice.reducer;

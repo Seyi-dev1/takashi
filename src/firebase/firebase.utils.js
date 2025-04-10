@@ -3,14 +3,13 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCh3IWrlm2NItCNsh41CxcAbnGGn9GNh60",
-  authDomain: "takashii.firebaseapp.com",
-  projectId: "takashii",
-  storageBucket: "takashii.firebasestorage.app",
-  messagingSenderId: "237222858816",
-  appId: "1:237222858816:web:03ed66316598568c034fa5",
+  apiKey: "AIzaSyByo6BFEgBE3WhSON9En_O-NdOOY1n4s3k",
+  authDomain: "city-tust.firebaseapp.com",
+  projectId: "city-tust",
+  storageBucket: "city-tust.firebasestorage.app",
+  messagingSenderId: "215874524066",
+  appId: "1:215874524066:web:1b636918a0a448864558fb",
 };
-
 export const handleDeposit = async (userAuth, data) => {
   const userRef = doc(database, `/users/${userAuth}`);
   const snapShot = await getDoc(userRef);

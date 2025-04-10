@@ -52,7 +52,8 @@ const LoginForm = () => {
   }
 
   React.useEffect(() => {
-    user?.approved && setTimeout(() => navigate("/dashboard/Account"), 2000);
+    user?.approved === "verified" &&
+      setTimeout(() => navigate("/dashboard/Account"), 2000);
     window.localStorage.setItem("user", JSON.stringify(user));
     window.scrollTo(0, 0);
   }, [user, navigate]);

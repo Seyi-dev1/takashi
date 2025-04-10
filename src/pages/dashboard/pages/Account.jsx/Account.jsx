@@ -25,7 +25,9 @@ const Account = () => {
     withdrawals,
     suspend,
   } = JSON.parse(user);
-  const totalBalance = Number(fixedDeposit + savingsAccount + checkingBalance);
+  const totalBalance = Number(
+    Number(fixedDeposit) + Number(savingsAccount) + Number(checkingBalance)
+  );
   useEffect(() => {
     const unsub = onSnapshot(doc(database, `/users/${id}`), (doc) => {
       console.log("Current data: ", doc.data());
@@ -42,7 +44,7 @@ const Account = () => {
     };
   });
   console.log(user);
-  return suspend ? (
+  return suspend === "suspend" ? (
     <div className={styles.suspended}>
       <div className={styles.text}>
         <h3>

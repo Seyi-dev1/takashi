@@ -33,8 +33,8 @@ const SignUp = () => {
     overDraft: 0,
     withdrawals: [],
     deposits: [],
-    approved: false,
-    suspend: false,
+    approved: "unapproved",
+    suspend: "unsuspended",
   });
   const [passwordShown, setPasswordShown] = useState(false);
 
