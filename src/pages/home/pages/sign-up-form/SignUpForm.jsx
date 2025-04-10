@@ -139,7 +139,7 @@ const SignUp = () => {
                 required={true}
                 id="country"
                 label="Country"
-                placeholder="United States"
+                placeholder="Australia"
               />
               <CInput
                 type="text"
